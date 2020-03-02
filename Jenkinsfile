@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "muddana/phone54405"
+    registry = "muddana/docker_test"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
