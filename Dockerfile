@@ -1,6 +1,5 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get -y install apache2
-ADD . /var/www/html 
-ENTRYPOINT apachectl -D FOREGROUND
-ENV name Srikanth Devops
+FROM nginx
+RUN rm /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/examplessl.conf
+COPY content /usr/share/nginx/html
+COPY conf /etc/nginx
